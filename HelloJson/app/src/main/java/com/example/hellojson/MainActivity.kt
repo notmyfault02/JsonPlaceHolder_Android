@@ -1,0 +1,30 @@
+package com.example.hellojson
+
+import android.content.Intent
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        feedBtn.setOnClickListener{
+            val intent = Intent(this, FeedActivity::class.java)
+            startActivity(intent)
+        }
+
+        photoBtn.setOnClickListener {
+            val intent = Intent(this, PhotoActivity::class.java)
+            startActivity(intent)
+        }
+
+        postBtn.setOnClickListener {
+            val intent = Intent(this, PostActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+}
